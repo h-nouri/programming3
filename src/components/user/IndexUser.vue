@@ -2,7 +2,7 @@
 import { onMounted, ref } from "vue";
 import Table from "./Table.vue";
 import axios from "axios";
-const all_users = ref([]);
+const all_users = ref(null);
 onMounted(() => {
   axios
     .get("https://jsonplaceholder.typicode.com/users")
