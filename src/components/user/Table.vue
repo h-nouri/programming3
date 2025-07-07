@@ -25,9 +25,9 @@ const props = defineProps({
         <td v-text="user.phone"></td>
         <td v-text="user.email"></td>
         <td>
-            <a href="#" class="p-2">
-                <i class="bi bi-eye-fill"></i>
-            </a>
+            <router-link :to="{name:'showUser',params:{id:user.id}}" class="p-2">
+              <i class="bi bi-eye-fill"></i>
+            </router-link>
             <a href="#" class="text-success p-2">
                 <i class="bi bi-pencil-fill"></i>
             </a>

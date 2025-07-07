@@ -23,5 +23,6 @@ onMounted(() => {
 <template>
   <div class="container">
     <Table :users="all_users"/>
+    <router-view></router-view>
   </div>
 </template>

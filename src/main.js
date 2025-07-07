@@ -7,13 +7,31 @@ import NotFound from './components/popular/NotFound.vue'
 import HomePage from './components/popular/HomePage.vue'
 import IndexUser from './components/user/IndexUser.vue'
 import IndexPost from './components/post/IndexPost.vue'
+import ShowUser from './components/user/ShowUser.vue'
+import GeneralTemplate from './components/popular/generalTemplate.vue'
 const routes = [
     { path: '/', component: HomePage, name:"Home" },
     {
       path:'/user',
-      component:IndexUser,
-      name:'indexUser'
+      component:GeneralTemplate,
+      children:[
+        {
+          path:'',
+          component:IndexUser,
+          name:'indexUser'
+        },
+        {
+          path:':id',
+          component:ShowUser,
+          name:'showUser'
+        },
+      ]
     },
+    // {
+    //   path:'/user/:id',
+    //   component:ShowUser,
+    //   name:'showUser'
+    // },
     {
       path:'/post',
       component:IndexPost,
