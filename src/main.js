@@ -9,6 +9,7 @@ import IndexUser from './components/user/IndexUser.vue'
 import IndexPost from './components/post/IndexPost.vue'
 import ShowUser from './components/user/ShowUser.vue'
 import GeneralTemplate from './components/popular/generalTemplate.vue'
+import CreateUser from './components/user/CreateUser.vue'
 const routes = [
     { path: '/', component: HomePage, name:"Home" },
     {
@@ -24,6 +25,11 @@ const routes = [
           path:':id',
           component:ShowUser,
           name:'showUser'
+        },
+        {
+          path:'create',
+          component:CreateUser,
+          name:'createUser'
         },
       ]
     },
