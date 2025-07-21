@@ -28,9 +28,10 @@ const props = defineProps({
             <router-link :to="{name:'showUser',params:{id:user.id}}" class="p-2">
               <i class="bi bi-eye-fill"></i>
             </router-link>
-            <a href="#" class="text-success p-2">
-                <i class="bi bi-pencil-fill"></i>
-            </a>
+            <router-link :to="{name:'editUser',params:{id:user.id}}" class="text-success p-2">
+              <i class="bi bi-pencil-fill"></i>
+            </router-link>
+           
             <a href="#" class="text-danger p-2">
                 <i class="bi bi-trash-fill"></i>
             </a>
